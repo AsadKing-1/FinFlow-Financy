@@ -1,69 +1,46 @@
-# React + TypeScript + Vite
+# 💸 FinFlow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Личный финансовый трекер для учёта доходов и расходов — быстро, удобно и без лишнего.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📋 Описание
 
-## Expanding the ESLint configuration
+**FinFlow** — это веб-приложение для управления личными финансами. Оно позволяет отслеживать доходы и расходы, видеть баланс и визуализировать движения денег. Идеально подходит для тех, кто хочет контролировать свой бюджет.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Функционал
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- ✅ Добавление и удаление транзакций (доходы/расходы)
+- ✅ Фильтрация по категориям
+- ✅ Отображение текущего баланса
+- ✅ Сохранение данных в `localStorage`
+- ✅ Адаптивный интерфейс
+- ✅ Поддержка английского языка 
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Используемые технологии
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- ⚛️ React
+- 🔡 TypeScript
+- 🎨 CSS Modules 
+- 💾 LocalStorage для сохранения данных
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 📦 Установка и запуск
+
+```bash
+# Клонируй репозиторий
+git clone https://github.com/AsadKing-1/FINFLOW.git
+
+# Перейди в папку проекта
+cd FINFLOW
+
+# Установи зависимости
+npm install
+
+# Запусти проект
+npm run dev
