@@ -1,0 +1,87 @@
+.cool-dropdown {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  z-index: 1000; 
+}
+
+.cool-dropdown-trigger {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+  user-select: none;
+  position: relative; 
+}
+
+.cool-dropdown-trigger:hover {
+  border-color: rgba(255,255,255,0.4);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.cool-dropdown-trigger .placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.cool-dropdown-trigger .icon {
+  margin-right: 8px;
+}
+
+.cool-dropdown-trigger .arrow {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.cool-dropdown-menu {
+  z-index: 10; 
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(26, 26, 46, 0.95);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  padding: 0.5rem 0;
+  animation: fadeIn 0.2s ease;
+  overflow: auto; 
+}
+
+.cool-dropdown-item {
+  padding: 0.7rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.cool-dropdown-item:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+.cool-dropdown-item.selected {
+  background: rgba(102, 126, 234, 0.2);
+  font-weight: 600;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
